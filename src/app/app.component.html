@@ -5,7 +5,7 @@
       <p>Add new Servers or blueprints!</p>
 
       <label>Server Name</label>
-      <input type="text" class="form-control" [(ngModel)]="newServerName"> // inputfeltets navn bruges i .ts filen
+      <input type="text" class="form-control" [(ngModel)]="newServerName"> <!--inputfeltets navn bruges i .ts filen-->
 
       <label>Server Content</label>
       <input type="text" class="form-control" [(ngModel)]="newServerContent">
@@ -15,26 +15,26 @@
       <button
         class="btn btn-primary"
         (click)="onAddServer()">Add Server</button>
-                // 2 knapper til at att server og BP
-      <button
-        class="btn btn-primary"
-        (click)="onAddBlueprint()">Add Server Blueprint</button>
+              <!-- 2 knapper til at att server og BP-->
+<button
+class="btn btn-primary"
+(click)="onAddBlueprint()">Add Server Blueprint</button>
 
-    </div>
-  </div>
-  <hr>
+</div>
+</div>
+<hr>
 
-  <div class="row">
-    <div class="col-xs-12">
-      <div
-        class="panel panel-default"
-        *ngFor="let element of serverElements"> // et ngFro (samme som et for loop i c#) angulars måde at loope elementer ud i html
+<div class="row">
+<div class="col-xs-12">
+<div
+class="panel panel-default"
+*ngFor="let element of serverElements">  <!--et ngFro (samme som et for loop i c#) angulars måde at loope elementer ud i html-->
         <div class="panel-heading">{{ element.name }}</div>
-        <div class="panel-body">    //her bliver der også lavet en ny kasse pr element i server arrayet
+        <div class="panel-body">    <!--her bliver der også lavet en ny kasse pr element i server arrayet-->
 
           <p>
-            <strong *ngIf="element.type === 'server'" style="color: red">{{ element.content }}</strong>   // Her ser ngIF (condition) efter om
-                                                                                                  typen er bp eller normal server og styler teksten
+            <strong *ngIf="element.type === 'server'" style="color: red">{{ element.content }}</strong>   <!--Her ser ngIF (condition) efter om-->
+                                                                                                 <!-- typen er bp eller normal server og styler teksten-->
             <em *ngIf="element.type === 'blueprint'">{{ element.content }}</em>
           </p>
 
@@ -44,7 +44,7 @@
   </div>
 </div>
 
-//Test område til demo af comp1 og hvor let det kan være
+<!--Test område til demo af comp1 og hvor let det kan være-->
 
 <div class="row">
   <div class="col-sm-4"></div>
